@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC - Kentucky Fried Chicken</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+        top: 0;
+        position: sticky;
+        background-color: white;
+        z-index: 1;
+        }
+        nav {
+        display: flex;
+        height: 100px;
+        padding: 0px 75px;
+        justify-content: space-between;
+        }
+
+        .kfclogo {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: space-between;
+        
+        }
+        .kfclogo>img {
+        height: 50%;
+        }
+
+        nav>.kfclogo>h3:hover {
+        cursor: pointer;
+        }
+        .logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 15%; 
+        }
+        .logo>img {
+            height: 50%;
+        }
+
+        nav>.logo>h3:hover {
+        cursor: pointer;
+        }
+        .start{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color:white;
+            font-size: 25px;
+        }
+        .wrapper {
+        text-align: center;
+        }
+
+        .button {
+        position: absolute;
+        top: 24%;
+        color:white;
+        background-color: crimson;
+        border-radius: 20px;
+        border-color: black;
+        font-size: 20px;
+        }
+        .browser{
+            display: flex;
+            height: 150px;
+            align-items: center;
+            justify-content: space-around;
+            padding: 150px 100px 80px 300px;
+        }
+    
+        #box{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 5px 100px 100px 300px;
+        }
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+        .card:hover {
+            cursor: pointer;
+            box-shadow: rgba(1, 1, 1, 10) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 0px 0px;
+        }
+        .card>img {
+            width: 100%;
+            margin: 0px;
+        }
+
+        .card>h2 {
+            text-align: center;
+            height: 2em;
+            margin-top: 10px;
+        }
+        .png{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        #offer {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+           gap: 20px;
+        }
+        .offerCard {
+            background-color: white;
+            color: black;
+            height: 100%;
+            margin-bottom: 10%;
+        }
+        .offerCard>h1 {
+            color:black;
+        }
+
+        .offerCard>img {
+            width: 100%;
+        }
+
+        .offerCard>p {
+            margin: 0px 10px;
+        }
+        .offerCard>button {
+            margin: 10% 10% 10% 50%;
+            background-color:black;
+            border-radius: 20px;
+            color:white;
+            font-size: 20px;
+        }
+        footer{
+            width: 100%;
+            background-color: #202124;
+            padding: 100px 100px 10px 100px;
+        }
+        
+        #pfooter {
+            display: flex;
+            width: 20%;
+            justify-content: flex-start;
+            padding: 20px 50px;
+        }
+
+        #pfooter>img {
+            width: 100px;
+            height: 70px;
+        }
+        #footer{
+            display: flex;
+        }
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 60%;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row>a {
+            text-decoration: none;
+            color: #E3E3E3;
+            font-weight: 100;
+            margin: 5px;
+        }
+
+        .row>a:hover {
+            font-weight: 600;
+        }
+        #app {
+        display: flex;
+        width: 20%;
+        justify-content: space-around;
+        }
+
+        #app>img {
+            width: 100px;
+            height: 50px;
+        }
+        .cpy{
+            height: 50px;
+            color:white;
+            font-size: 12px;
+            margin-top: 90px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="kfclogo">
+            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="kfclogo">
+            <h3 href="menu.html">Menu</h3>
+            <h3 href="deals.html">Deals</h3>
+         </div>
+         <div class="logo">
+            <h3 href="signin">SignIn</h3>
+            <img src="https://i.pinimg.com/736x/85/a2/bd/85a2bdb05c9c51b9e51cec05826caa69.jpg" alt="">
+         </div>
+        </nav>   
+        
+    </header>
+    <div class="start">
+        <h6>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h6> 
+    </div>  
+    <div class="wrapper">
+        <button class="button">Start Over</button>
+    </div>
+    <div class="browse">
+        <h1>BROWSE MENU CATEGORIES</h1>
+    </div>
+    <div id="box">
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/1WizJjtsdbD13GhR79APKq/206f1a5d5e2171a77f5c330157643af6/KFC-Category-thumbnails-17JAN-D1-465X327-N-1A.jpg?fm=webp&fit=fill"
+                alt="">
+            <h2>WEDNESDAY SPECIAL</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/2OkWL1jHjLcPXJ94ID2zfT/93dd7f9a366a4da5fde0473e463b80bb/CAT158?fm=webp&fit=fill"
+                alt="">
+            <h2>BOX MEALS</h2>
+        </div>
+        <div class="card">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/no-image.jpg"
+                alt="">
+            <h2>VARIETY BUCKET</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/2MisPscDV1k33qLnGwQ2il/14bdab6e4b9e25e1b91a8578df5097f2/CAT86?fm=webp&fit=fill"
+                alt="">
+            <h2>CHICKEN BUCKETS</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/782RGpnmm4aFsY2fnFAJoH/f8b98a12949b08134595c9dacb764103/TILES_Burgers_465x327_A.jpg?fm=webp&fit=fill"
+                alt="">
+            <h2>BURGERS</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/5VQAImh8fghx8cYtmjRBxu/050c6b65545546ecca314321a5dddc15/CAT89?fm=webp&fit=fill"
+                alt="">
+            <h2>SNACKS</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/5V1Umta0kqz1a6v5M5CtqZ/b5230b45fc78675ceaf6baaba6004caa/CAT228?fm=webp&fit=fill"
+                alt="">
+            <h2>VALUE LUNCH SPECIALS</h2>
+        </div>
+        <div class="card">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/36fmhTI0ExjACUo2G23zqT/663c65a557bdf331f3936df3682a3f8d/CAT213?fm=webp&fit=fill"
+                alt="">
+            <h2>RICE BOWLZ</h2>
+        </div>
+    </div>
+    <div class="png" href='menu.html'>
+        <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" width="1500px" height="200px" alt="">
+        <h2 style="margin-bottom: 50px; font-weight: 100;">View All Menu ⟶</h2>
+    </div>
+    <h1>SAVE MORE AS YOUR ORDER</h1>
+    
+        <div id="offer">
+            <div class="offerCard">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/md/CHKZINGER.jpg?ver=62.79"
+                    alt="">
+                <h1>FREE CHICKEN ZINGER ON A CART VALUE OF..</h1>
+                <p>1Pc free chicken Zinger on a cart value of 499 or above on..</p>
+                <button>Apply Offer</button>
+            </div>
+            <div class="offerCard">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/md/ADDCHK99.jpg?ver=62.79"
+                    alt="">
+                <h1>ADD 2 PC HOT N CRISPY CHICKEN AT JUST RS 9..</h1>
+                <p>Add 2pc hot n crispy chicken at just rs 99 on min cart value..</p>
+                <button>Apply Offer</button>
+            </div>
+            <div class="offerCard">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=62.79"
+                    alt="">
+                <h1>UPTO RS 100 OFF ON MIN CART VALUE OF RS699 OR MORE..</h1>
+                <p>Upto rs 100 off on min cart value of rs 699 or more.application on..</p>
+                <button>Apply Offer</button>
+            </div>
+            <div class="offerCard">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/FREEROLL.jpg?ver=62.79"
+                    alt="">
+                <h1>FREE DOUBLE CHICKEN ROLL ON A CART VALUE OF 999</h1>
+                <p>Free double chicken roll on a cart value of 999 or above</p>
+                <button>Apply Offer</button>
+            </div>
+        </div>
+    
+        <footer>
+            <div id="footer">
+                <div id="pfooter">
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg?h=120&w=120&fm=webp&fit=fill" alt="">
+                </div>
+                <div id="container">
+                    <div class="row">
+                        <a href="">KFC INDIA</a>
+                        <a href="">ABOUT KFC</a>
+                        <a href="">KFC CARE</a>
+                        <a href="">Careers</a>
+                        <a href="">Our golden past</a>
+                        <a href="">Responsible Disclosure</a>
+                    </div>
+                    <div class="row">
+                        <a href="">LEGAL</a>
+                        <a href="">terms and Conditions</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Disclaimer</a>
+                        <a href="">Caution Notice</a>   
+                    </div>
+                    <div class="row">
+                        <a href="">SUPPORTS</a>
+                        <a href="">Get Help</a>
+                        <a href="">Contact Us</a>
+                        <a href=""> KFC Feedback</a>
+                        <a href="">Privacy Policy</a> 
+                    </div>
+                </div>
+                <div id="app">
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg?h=90&w=266&fm=webp&fit=fill" alt="">
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg?h=90&w=266&fm=webp&fit=fill" alt="">
+                </div>
+            </div>
+            <div class="cpy">
+                <p>&copy; KFC  corporation 2025  all rights reserved build pwa-2501-0-3-8es56</p>
+            </div>
+        </footer>
+    </body>
+    </html>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

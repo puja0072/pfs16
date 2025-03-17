@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="stack">this is a new <span>paragraph</span>
+        <p>spacing</p>
+    </div> -->
+    <!-- <script>
+        let element = document.getElementById("stack");
+        let content = element.innerHTML;
+        alert (content)
+        element.innerHTML = "Modifying The Paragraph";
+    </script> -->
+
+
+    
+    <!-- <div id="myPara">This element has <span>spacing</span><p style="display: none">Hidden text</p></div>
+
+<script>
+  let element = document.getElementById("myPara");
+  let content = element.textContent; // Output: "This element has spacing Hidden text"
+  alert(content)
+  element.textContent = "Hello"; // Replaces all text content
+</script> -->
+
+<p id="myPara">This element has <span>spacing</span></p>
+
+<script>
+  let element = document.getElementById("myPara");
+  let content = element.outerHTML; 
+  alert(content)
+  element.outerHTML = "<div>sdfghjkjhvvbn</div>"; 
+</script>
+
+</body>
+</html>

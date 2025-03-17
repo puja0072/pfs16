@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // const myPromise = new Promise ((resolve,reject)=>{
+        //     const randomNum = Math.random();
+        //     if (randomNum>0.5){
+        //         resolve("num Greater")
+        //     }else{
+        //         reject("smaller")}
+            
+        // })
+
+        // myPromise
+        // .then((value)=>{
+        //     console.log(value)
+        //     return ("Hello World")
+        // })
+        // .then(message=>{
+        //     console.log(message)
+        // })
+        // .catch((error)=>{
+        //     console.log(error)
+        // });
+
+
+        // promise.all()
+        // let p1 = new Promise ((resolve,reject)=>{
+        //     setTimeout(resolve("first"),1000)
+        // })
+        // let p2 = new Promise ((resolve,reject)=>{
+        //     setTimeout(reject("Second"),2000)
+        // })
+        // let p3 = new Promise ((resolve,reject)=>{
+        //     setTimeout(resolve("third"),3000)
+        // })
+        
+        // Promise.all([p1,p2,p3])
+        // .then((value)=>{console.log(value)})
+        // .catch((error)=>{console.log(error)})
+
+        // Promise.allSettled([p1,p2,p3])
+        // .then((value)=>{console.log(value)})
+        // .catch((error)=>{console.log(error)})
+
+
+        let r1 = new Promise ((resolve,reject)=>{
+            setTimeout(reject,"Hello",2000);
+        })
+        let r2 = new Promise ((resolve,reject)=>{
+            setTimeout(reject,"World",3000);
+        })
+        let r3 = new Promise ((resolve,reject)=>{
+            setTimeout(resolve,"helo",4000);
+        })
+
+        // Promise.any([r1,r2,r3])
+        // .then((value)=>{console.log(value)})
+        // .catch((error)=>{console.log(error)})
+
+        Promise.race([r1,r2,r3])
+        .then((value)=>{console.log(value)})
+        .catch((error)=>{console.log(error)})
+
+
+
+
+    </script>
+</body>
+</html>
